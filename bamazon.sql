@@ -1,17 +1,15 @@
 DROP DATABASE IF EXISTS bamazon_DB;
 
 CREATE DATABASE bamazon_DB;
-
 USE bamazon_DB;
 
 CREATE TABLE products (
-id INT NOT NULL AUTO_INCREMENT,
-  item_id INT NULL,
-  product_name VARCHAR(45) NULL,
-  department_name VARCHAR(45) NULL,
-  price DECIMAL(10,2) NULL,
-  stock_quantity INT NULL,
-  PRIMARY KEY (id)
+  item_id INT NOT NULL AUTO_INCREMENT,
+  product_name VARCHAR(45) NOT NULL,
+  department_name VARCHAR(45) NOT NULL,
+  price DECIMAL(10,4) NOT  NULL,
+  stock_quantity INT(10) NOT NULL,
+  PRIMARY KEY (item_id)
 );
 
 INSERT INTO products (item_id, product_name,  department_name, price, stock_quantity)
